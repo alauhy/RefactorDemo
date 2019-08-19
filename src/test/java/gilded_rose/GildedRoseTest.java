@@ -120,13 +120,23 @@ public class GildedRoseTest {
 
     }
     @Test
-    public void should_quality_50_when_updateQuality_given_normal_item_sellIn_0_and_quality_is_48(){
+    public void should_quality_50_when_updateQuality_given_item_name_Aged_Brie_sellIn_0_and_quality_is_48(){
         Item item = new Item("Aged Brie",0,48);
         GildedRose gildedRose = new GildedRose(singletonList(item));
 
         gildedRose.updateQuality();
 
         Assert.assertEquals(50,item.getQuality());
+
+    }
+    @Test
+    public void should_quality_0_when_updateQuality_given_item_name_Backstage_passes_to_a_TAFKAL80ETC_concert_sellIn_0_and_quality_is_48(){
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert",0,48);
+        GildedRose gildedRose = new GildedRose(singletonList(item));
+
+        gildedRose.updateQuality();
+
+        Assert.assertEquals(0,item.getQuality());
 
     }
 
