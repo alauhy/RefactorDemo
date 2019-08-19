@@ -39,4 +39,14 @@ public class GildedRoseTest {
         Assert.assertEquals(50,item.getQuality());
 
     }
+    @Test
+    public void should_quality_50_when_updateQuality_given_item_name_Aged_Brie_sellIn_10_and_quality_is_49(){
+        Item item = new Item("Aged Brie",10,49);
+        GildedRose gildedRose = new GildedRose(singletonList(item));
+
+        gildedRose.updateQuality();
+
+        Assert.assertEquals(50,item.getQuality());
+
+    }
 }
