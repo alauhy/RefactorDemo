@@ -19,4 +19,14 @@ public class GildedRoseTest {
         Assert.assertEquals(49,item.getQuality());
 
     }
+    @Test
+    public void should_quality_49_when_updateQuality_given_normal_item_sellIn_10_and_quality_is_0(){
+        Item item = new Item("oocl full stack",10,0);
+        GildedRose gildedRose = new GildedRose(singletonList(item));
+
+        gildedRose.updateQuality();
+
+        Assert.assertEquals(0,item.getQuality());
+
+    }
 }
