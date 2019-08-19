@@ -99,5 +99,27 @@ public class GildedRoseTest {
         Assert.assertEquals(10,item.getSellIn());
 
     }
+    @Test
+    public void should_quality_48_when_updateQuality_given_normal_item_sellIn_0_and_quality_is_50(){
+        Item item = new Item("oocl full stack",0,50);
+        GildedRose gildedRose = new GildedRose(singletonList(item));
+
+        gildedRose.updateQuality();
+
+        Assert.assertEquals(48,item.getQuality());
+
+    }
+    @Test
+    public void should_quality_48_when_updateQuality_given_normal_item_sellIn_0_and_quality_is_0(){
+        Item item = new Item("oocl full stack",0,0);
+        GildedRose gildedRose = new GildedRose(singletonList(item));
+
+        gildedRose.updateQuality();
+
+        Assert.assertEquals(0,item.getQuality());
+
+    }
+
+
 
 }
