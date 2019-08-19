@@ -1,6 +1,6 @@
 package gildedRose;
 
-public class Item {
+public abstract class Item {
 
     public String name;
 
@@ -27,4 +27,5 @@ public class Item {
 
         return quality;
     }
+    public abstract void updateQuality();
 }
