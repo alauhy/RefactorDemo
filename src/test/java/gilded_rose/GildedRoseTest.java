@@ -139,6 +139,16 @@ public class GildedRoseTest {
         Assert.assertEquals(0,item.getQuality());
 
     }
+    @Test
+    public void should_quality_50_when_updateQuality_given_item_name_Sulfuras_Hand_of_Ragnaros_sellIn_0_and_quality_is_50(){
+        Item item = new Item("Sulfuras, Hand of Ragnaros",0,50);
+        GildedRose gildedRose = new GildedRose(singletonList(item));
+
+        gildedRose.updateQuality();
+
+        Assert.assertEquals(50,item.getQuality());
+
+    }
 
 
 
